@@ -1,1 +1,7 @@
 node_modules
+.next/
+out/
+build/
+*.local
+.DS_Store
+Thumbs.db
