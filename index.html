@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hibulance — Emergency Medical Response</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo" onclick="showSection('hero')">
+      <svg class="logo-svg" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="30" fill="#D41F26"/>
+        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+              font-family="Space Grotesk, sans-serif" font-weight="700"
+              font-size="24" fill="white" letter-spacing="-1">hi</text>
+      </svg>
+      <span>hibulance</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showSection('hero')">Home</a></li>
+      <li><a href="#" onclick="showSection('request')">Request</a></li>
+      <li><a href="#" onclick="showSection('track')">Track</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <button class="nav-cta pulse-btn" onclick="showSection('request')">
+      <span class="dot-live"></span> Emergency Request
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─── HERO SECTION ──────────────────────────────────────── -->
+  <section class="section active" id="hero">
+    <!-- Animated background blobs -->
+    <div class="bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot-live"></span> 24/7 Emergency Response Active
+      </div>
+      <h1 class="hero-title">
+        Fast. Reliable.<br/>
+        <span class="accent">Life-Saving.</span>
+      </h1>
+      <p class="hero-sub">
+        Request a medical ambulance in seconds. Our fleet of certified paramedics
+        is on standby — ready to reach you anywhere in the city within minutes.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary big" onclick="showSection('request')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Request Ambulance
+        </button>
+        <button class="btn-ghost big" onclick="showSection('track')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          Track My Ambulance
+        </button>
+      </div>
+
+      <!-- Stats row -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-num" data-target="4">0</span><span class="stat-unit">min</span>
+          <span class="stat-label">Avg. Response Time</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="120">0</span><span class="stat-unit">+</span>
+          <span class="stat-label">Ambulances Active</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="98">0</span><span class="stat-unit">%</span>
+          <span class="stat-label">Success Rate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating ambulance illustration -->
+    <div class="hero-visual">
+      <div class="ambulance-card float-anim">
+        <div class="amb-card-header">
+          <div class="amb-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#D41F26"/>
+              <path d="M8 28V20a4 4 0 014-4h14l6 8H8z" fill="white"/>
+              <path d="M8 28h28v4a2 2 0 01-2 2H10a2 2 0 01-2-2v-4z" fill="white"/>
+              <rect x="30" y="20" width="8" height="8" rx="1" fill="white"/>
+              <circle cx="14" cy="34" r="3" fill="#D41F26"/>
+              <circle cx="30" cy="34" r="3" fill="#D41F26"/>
+              <rect x="19" y="22" width="4" height="8" rx="1" fill="#D41F26"/>
+              <rect x="16" y="25" width="10" height="2" rx="1" fill="#D41F26"/>
+            </svg>
+          </div>
+          <div>
+            <div class="amb-unit">Unit AMB-07</div>
+            <div class="amb-status">Dispatched</div>
+          </div>
+          <div class="siren-lights">
+            <div class="siren red"></div>
+            <div class="siren blue"></div>
+          </div>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+          <span class="eta-label">ETA 3 min</span>
+        </div>
+        <div class="paramedic-row">
+          <div class="para-avatar">J</div>
+          <div>
+            <div class="para-name">Dr. James Osei</div>
+            <div class="para-role">Lead Paramedic</div>
+          </div>
+          <div class="rating">★ 4.9</div>
+        </div>
+      </div>
+
+      <!-- Pulse ring -->
+      <div class="pulse-ring"></div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ─── REQUEST SECTION ───────────────────────────────────── -->
+  <section class="section" id="request">
+    <div class="section-inner two-col">
+
+      <!-- LEFT: Form steps -->
+      <div class="form-panel">
+        <div class="step-indicator">
+          <div class="step active" id="step-dot-1"><span>1</span><label>Details</label></div>
+          <div class="step-line"></div>
+          <div class="step" id="step-dot-2"><span>2</span><label>Review</label></div>
+          <div class="step-line"></div>
+          <div class="step" id="step-dot-3"><span>3</span><label>Payment</label></div>
+        </div>
+
+        <!-- STEP 1: Emergency Details -->
+        <div class="form-step active" id="form-step-1">
+          <h2 class="form-title">Request Emergency<br/><span class="accent">Medical Assistance</span></h2>
+          <p class="form-sub">Fill in the details below. Help is on its way.</p>
+
+          <div class="input-group">
+            <label>Type of Emergency</label>
+            <div class="emergency-types">
+              <button class="etype active" data-type="cardiac">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                Cardiac
+              </button>
+              <button class="etype" data-type="trauma">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Trauma
+              </button>
+              <button class="etype" data-type="respiratory">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                Respiratory
+              </button>
+              <button class="etype" data-type="stroke">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                Stroke
+              </button>
+              <button class="etype" data-type="accident">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Accident
+              </button>
+              <button class="etype" data-type="other">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Other
+              </button>
+            </div>
+          </div>
+
+          <div class="input-row">
+            <div class="input-group">
+              <label for="patient-name">Patient's Full Name</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <input type="text" id="patient-name" placeholder="e.g. Kwame Mensah" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="patient-age">Age</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                <input type="number" id="patient-age" placeholder="e.g. 45" min="0" max="120" />
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="contact-phone">Contact Phone Number</label>
+            <div class="input-wrap">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.0 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+              <input type="tel" id="contact-phone" placeholder="+233 XX XXX XXXX" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="location">Pickup Location</label>
+            <div class="input-wrap">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <input type="text" id="location" placeholder="Enter address or use GPS" />
+              <button class="gps-btn" onclick="useGPS()" title="Use my location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="notes">Additional Notes <span class="optional">(optional)</span></label>
+            <textarea id="notes" placeholder="Describe the situation, floor number, any relevant details..."></textarea>
+          </div>
+
+          <div class="input-group">
+            <label>Service Level</label>
+            <div class="service-levels">
+              <label class="service-card active" for="sl-basic">
+                <input type="radio" name="service" id="sl-basic" value="basic" checked/>
+                <div class="sl-content">
+                  <div class="sl-name">Basic Life Support</div>
+                  <div class="sl-price">GH₵ 150</div>
+                  <div class="sl-desc">Standard ambulance with EMTs</div>
+                </div>
+              </label>
+              <label class="service-card" for="sl-advanced">
+                <input type="radio" name="service" id="sl-advanced" value="advanced"/>
+                <div class="sl-content">
+                  <div class="sl-name">Advanced Life Support</div>
+                  <div class="sl-price">GH₵ 300</div>
+                  <div class="sl-desc">Paramedic + advanced equipment</div>
+                </div>
+              </label>
+              <label class="service-card" for="sl-critical">
+                <input type="radio" name="service" id="sl-critical" value="critical"/>
+                <div class="sl-content">
+                  <div class="sl-name">Critical Care</div>
+                  <div class="sl-price">GH₵ 500</div>
+                  <div class="sl-desc">Doctor + ICU-level mobile unit</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <button class="btn-primary full" onclick="goToStep(2)">
+            Continue to Review
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2: Review -->
+        <div class="form-step" id="form-step-2">
+          <h2 class="form-title">Review Your<br/><span class="accent">Request</span></h2>
+          <p class="form-sub">Confirm the details before proceeding to payment.</p>
+
+          <div class="review-card" id="review-details">
+            <!-- Populated by JS -->
+          </div>
+
+          <div class="summary-box">
+            <div class="summary-row">
+              <span>Service Fee</span>
+              <span id="summary-fee">GH₵ 150</span>
+            </div>
+            <div class="summary-row">
+              <span>Processing Fee</span>
+              <span>GH₵ 5</span>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span id="summary-total">GH₵ 155</span>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn-ghost" onclick="goToStep(1)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Back
+            </button>
+            <button class="btn-primary" onclick="goToStep(3)">
+              Proceed to Payment
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Payment -->
+        <div class="form-step" id="form-step-3">
+          <h2 class="form-title">Secure<br/><span class="accent">Payment</span></h2>
+          <p class="form-sub">Your payment is encrypted and secure.</p>
+
+          <div class="payment-methods">
+            <button class="pay-method active" data-method="card" onclick="selectPayMethod('card', this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              Card
+            </button>
+            <button class="pay-method" data-method="momo" onclick="selectPayMethod('momo', this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0112 19"/><path d="M2 1l11 11M2 9v1a10 10 0 0010 10h1"/></svg>
+              Mobile Money
+            </button>
+            <button class="pay-method" data-method="insurance" onclick="selectPayMethod('insurance', this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Insurance
+            </button>
+          </div>
+
+          <!-- Card Payment -->
+          <div class="pay-panel active" id="pay-card">
+            <div class="card-preview" id="card-preview">
+              <div class="card-chip"></div>
+              <div class="card-number-display" id="card-num-display">•••• •••• •••• ••••</div>
+              <div class="card-footer-row">
+                <div>
+                  <div class="card-label">Card Holder</div>
+                  <div class="card-holder-display" id="card-holder-display">YOUR NAME</div>
+                </div>
+                <div>
+                  <div class="card-label">Expires</div>
+                  <div class="card-exp-display" id="card-exp-display">MM/YY</div>
+                </div>
+                <div class="card-brand">
+                  <div class="brand-circle brand-r"></div>
+                  <div class="brand-circle brand-o"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="card-number">Card Number</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)" />
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="card-name">Cardholder Name</label>
+                <div class="input-wrap">
+                  <input type="text" id="card-name" placeholder="As on card" oninput="updateCardDisplay()" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="card-exp">Expiry</label>
+                <div class="input-wrap">
+                  <input type="text" id="card-exp" placeholder="MM/YY" maxlength="5" oninput="formatExpiry(this)" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="card-cvv">CVV</label>
+                <div class="input-wrap">
+                  <input type="password" id="card-cvv" placeholder="•••" maxlength="3" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Money -->
+          <div class="pay-panel" id="pay-momo">
+            <div class="momo-networks">
+              <button class="momo-net active" onclick="selectMomo(this, 'mtn')">MTN MoMo</button>
+              <button class="momo-net" onclick="selectMomo(this, 'vodafone')">Telecel Cash</button>
+              <button class="momo-net" onclick="selectMomo(this, 'airtel')">AirtelTigo Money</button>
+            </div>
+            <div class="input-group">
+              <label for="momo-number">Mobile Money Number</label>
+              <div class="input-wrap">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
+                <input type="tel" id="momo-number" placeholder="+233 XX XXX XXXX" />
+              </div>
+            </div>
+            <div class="momo-info">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              A prompt will be sent to your phone to authorize the payment.
+            </div>
+          </div>
+
+          <!-- Insurance -->
+          <div class="pay-panel" id="pay-insurance">
+            <div class="input-group">
+              <label for="insurance-provider">Insurance Provider</label>
+              <div class="input-wrap">
+                <select id="insurance-provider">
+                  <option value="">Select provider...</option>
+                  <option>NHIS</option>
+                  <option>Star Assurance</option>
+                  <option>Enterprise Life</option>
+                  <option>Hollard Insurance</option>
+                  <option>SIC Insurance</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="insurance-id">Insurance ID / Member Number</label>
+              <div class="input-wrap">
+                <input type="text" id="insurance-id" placeholder="e.g. NHIS-1234567" />
+              </div>
+            </div>
+          </div>
+
+          <div class="secure-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            256-bit SSL Encrypted · PCI DSS Compliant
+          </div>
+
+          <div class="btn-row">
+            <button class="btn-ghost" onclick="goToStep(2)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Back
+            </button>
+            <button class="btn-primary" id="pay-btn" onclick="processPayment()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Pay &amp; Dispatch Ambulance
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Live map / info panel -->
+      <div class="info-panel">
+        <div class="map-mock">
+          <div class="map-bg">
+            <!-- Grid streets -->
+            <svg class="map-streets" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="400" fill="#f0ece4"/>
+              <!-- Horizontal streets -->
+              <rect x="0" y="60" width="400" height="10" fill="#e0dbd0"/>
+              <rect x="0" y="130" width="400" height="16" fill="#d8d3c8"/>
+              <rect x="0" y="200" width="400" height="10" fill="#e0dbd0"/>
+              <rect x="0" y="270" width="400" height="16" fill="#d8d3c8"/>
+              <rect x="0" y="340" width="400" height="10" fill="#e0dbd0"/>
+              <!-- Vertical streets -->
+              <rect x="60" y="0" width="10" height="400" fill="#e0dbd0"/>
+              <rect x="140" y="0" width="16" height="400" fill="#d8d3c8"/>
+              <rect x="220" y="0" width="10" height="400" fill="#e0dbd0"/>
+              <rect x="300" y="0" width="16" height="400" fill="#d8d3c8"/>
+              <rect x="370" y="0" width="10" height="400" fill="#e0dbd0"/>
+              <!-- Blocks -->
+              <rect x="70" y="70" width="60" height="50" rx="4" fill="#e8e3da"/>
+              <rect x="150" y="70" width="60" height="50" rx="4" fill="#e8e3da"/>
+              <rect x="230" y="70" width="60" height="50" rx="4" fill="#e8e3da"/>
+              <rect x="320" y="70" width="40" height="50" rx="4" fill="#e8e3da"/>
+              <rect x="70" y="145" width="40" height="40" rx="4" fill="#ddd8cf"/>
+              <rect x="150" y="145" width="80" height="40" rx="4" fill="#ddd8cf"/>
+              <rect x="240" y="145" width="50" height="40" rx="4" fill="#ddd8cf"/>
+              <rect x="320" y="145" width="40" height="40" rx="4" fill="#ddd8cf"/>
+              <rect x="70" y="215" width="60" height="40" rx="4" fill="#e8e3da"/>
+              <rect x="150" y="215" width="50" height="40" rx="4" fill="#e8e3da"/>
+              <rect x="230" y="215" width="60" height="40" rx="4" fill="#e8e3da"/>
+              <rect x="70" y="285" width="40" height="40" rx="4" fill="#ddd8cf"/>
+              <rect x="150" y="285" width="80" height="40" rx="4" fill="#ddd8cf"/>
+              <rect x="250" y="285" width="50" height="40" rx="4" fill="#ddd8cf"/>
+              <rect x="320" y="285" width="40" height="40" rx="4" fill="#ddd8cf"/>
+            </svg>
+            <!-- Location pin -->
+            <div class="map-pin you-pin">
+              <svg viewBox="0 0 24 24" fill="#D41F26"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3" fill="white"/></svg>
+              <span>You</span>
+            </div>
+            <!-- Ambulance pin -->
+            <div class="map-pin amb-pin" id="amb-map-pin">
+              <div class="amb-dot">
+                <svg viewBox="0 0 16 16" fill="white"><path d="M3 7V5a5 5 0 0110 0v2h1a1 1 0 011 1v5a3 3 0 01-3 3H4a3 3 0 01-3-3V8a1 1 0 011-1h1z"/></svg>
+              </div>
+              <span>AMB</span>
+            </div>
+            <!-- Route line -->
+            <svg class="route-line" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 80 320 L 80 130 L 220 130 L 220 200" stroke="#D41F26" stroke-width="3" fill="none" stroke-dasharray="8 4" opacity="0.7"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Info cards below map -->
+        <div class="info-cards">
+          <div class="info-card-sm">
+            <div class="ic-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D41F26" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <div class="ic-title">Average ETA</div>
+              <div class="ic-val">4–7 minutes</div>
+            </div>
+          </div>
+          <div class="info-card-sm">
+            <div class="ic-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D41F26" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div>
+              <div class="ic-title">Nearest Unit</div>
+              <div class="ic-val">AMB-07 · 2.1 km</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TRACK SECTION ─────────────────────────────────────── -->
+  <section class="section" id="track">
+    <div class="section-inner">
+      <div class="track-hero">
+        <h2 class="form-title">Track Your<br/><span class="accent">Ambulance</span></h2>
+        <p class="form-sub">Enter your booking reference or phone number to track in real-time.</p>
+        <div class="track-input-row">
+          <div class="input-wrap">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="track-ref" placeholder="Booking ref or phone number" />
+          </div>
+          <button class="btn-primary" onclick="trackAmbulance()">Track Now</button>
+        </div>
+      </div>
+
+      <!-- Demo tracking card (shown after search) -->
+      <div class="track-result" id="track-result" style="display:none;">
+        <div class="track-card">
+          <div class="track-header">
+            <div class="track-booking">
+              <span class="track-label">Booking Ref</span>
+              <span class="track-id">HIB-2026-0042</span>
+            </div>
+            <div class="track-status-badge dispatched">Dispatched</div>
+          </div>
+
+          <div class="track-timeline">
+            <div class="tl-step done">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-title">Request Received</div>
+                <div class="tl-time">10:32 AM</div>
+              </div>
+            </div>
+            <div class="tl-line done"></div>
+            <div class="tl-step done">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-title">Ambulance Dispatched</div>
+                <div class="tl-time">10:34 AM</div>
+              </div>
+            </div>
+            <div class="tl-line active"></div>
+            <div class="tl-step active">
+              <div class="tl-dot pulse"></div>
+              <div class="tl-content">
+                <div class="tl-title">En Route to You</div>
+                <div class="tl-time">ETA 3 min</div>
+              </div>
+            </div>
+            <div class="tl-line"></div>
+            <div class="tl-step">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-title">Arrived</div>
+                <div class="tl-time">–</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="paramedic-row big">
+            <div class="para-avatar big">J</div>
+            <div>
+              <div class="para-name">Dr. James Osei</div>
+              <div class="para-role">Lead Paramedic · AMB-07</div>
+            </div>
+            <a href="tel:+233000000000" class="call-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.0 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+              Call
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONFIRMATION OVERLAY ─────────────────────────────── -->
+  <div class="overlay" id="confirm-overlay">
+    <div class="confirm-card">
+      <div class="confirm-icon">
+        <div class="confirm-check">
+          <svg viewBox="0 0 52 52" class="checkmark">
+            <circle cx="26" cy="26" r="25" fill="none" class="checkmark-circle"/>
+            <path fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" class="checkmark-check"/>
+          </svg>
+        </div>
+      </div>
+      <h3>Ambulance Dispatched!</h3>
+      <p>Payment confirmed. Unit <strong>AMB-07</strong> is on the way.<br/>Estimated arrival: <strong>4 minutes</strong>.</p>
+      <div class="booking-ref-box">
+        <span class="ref-label">Booking Reference</span>
+        <span class="ref-val">HIB-2026-0042</span>
+      </div>
+      <button class="btn-primary full" onclick="showSection('track'); closeConfirm()">
+        Track Ambulance Live
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button class="btn-ghost full" onclick="closeConfirm()">Close</button>
+    </div>
+  </div>
+
+  <!-- ─── ABOUT SECTION ─────────────────────────────────────── -->
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <div class="about-text">
+        <div class="hero-badge">About Us</div>
+        <h2>Ghana's Leading<br/><span class="accent">Emergency Response</span><br/>Platform</h2>
+        <p>Hibulance bridges the critical gap between emergencies and medical response. We partner with certified ambulance operators, hospitals, and paramedics to deliver rapid, reliable care — at the tap of a button.</p>
+        <div class="about-features">
+          <div class="af-item">
+            <div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D41F26" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <div><strong>Certified Operators</strong><br/>All ambulance partners are fully licensed and certified.</div>
+          </div>
+          <div class="af-item">
+            <div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D41F26" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div><strong>Real-Time Dispatch</strong><br/>AI-powered routing finds the nearest available unit instantly.</div>
+          </div>
+          <div class="af-item">
+            <div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D41F26" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <div><strong>Flexible Payment</strong><br/>Pay by card, mobile money, or insurance — all secure.</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-badge-big">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="60" fill="#D41F26"/>
+            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+                  font-family="Space Grotesk, sans-serif" font-weight="700"
+                  font-size="52" fill="white" letter-spacing="-3">hi</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg class="logo-svg sm" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="30" fill="#D41F26"/>
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+                font-family="Space Grotesk, sans-serif" font-weight="700"
+                font-size="24" fill="white" letter-spacing="-1">hi</text>
+        </svg>
+        <span>hibulance</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-copy">© 2026 Hibulance. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

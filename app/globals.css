@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS variables — Dark mode (default) ── */
+:root,
+[data-theme="dark"] {
+  --brand:        #008751;
+  --brand-dark:   #006B3C;
+  --brand-light:  #1a9e63;
+  --brand-glow:   rgba(0, 135, 81, 0.35);
+
+  --bg:           #080e09;
+  --bg-2:         #0e1510;
+  --bg-3:         #141e15;
+  --surface:      rgba(255,255,255,0.04);
+  --surface-2:    rgba(255,255,255,0.07);
+  --border:       rgba(255,255,255,0.08);
+  --border-2:     rgba(255,255,255,0.14);
+  --text:         #f0f0f0;
+  --text-muted:   rgba(240,240,240,0.55);
+  --text-faint:   rgba(240,240,240,0.3);
+  --scrollbar-bg: #0e1510;
+
+  --glass-bg:    rgba(255,255,255,0.04);
+  --glass-border:rgba(255,255,255,0.08);
+
+  --map-base:    #0c1208;
+  --map-road:    #161e10;
+  --map-road-2:  #1e2a18;
+  --map-block:   #192213;
+  --map-overlay-from: #080e09;
+
+  --field-bg:    rgba(255,255,255,0.05);
+  --field-border:rgba(255,255,255,0.10);
+  --field-text:  #f0f0f0;
+  --field-ph:    rgba(240,240,240,0.30);
+  --field-opt:   #1a1a1a;
+
+  --hero-bg-img-opacity: 0.08;
+  --hero-photo-overlay: linear-gradient(
+    to bottom,
+    rgba(8,14,9,0.88) 0%,
+    rgba(8,14,9,0.58) 40%,
+    rgba(8,14,9,0.70) 100%
+  );
+}
+
+/* ── Light mode ── */
+[data-theme="light"] {
+  --bg:           #f4f8f5;
+  --bg-2:         #ecf3ee;
+  --bg-3:         #e4ede6;
+  --surface:      rgba(255,255,255,0.75);
+  --surface-2:    rgba(255,255,255,0.90);
+  --border:       rgba(0,0,0,0.08);
+  --border-2:     rgba(0,0,0,0.14);
+  --text:         #0d1f12;
+  --text-muted:   rgba(13,31,18,0.60);
+  --text-faint:   rgba(13,31,18,0.38);
+  --scrollbar-bg: #e4ede6;
+
+  --glass-bg:    rgba(255,255,255,0.70);
+  --glass-border:rgba(0,0,0,0.08);
+
+  --map-base:    #e8f0ea;
+  --map-road:    #d8e4da;
+  --map-road-2:  #cddacf;
+  --map-block:   #dde8df;
+  --map-overlay-from: #f4f8f5;
+
+  --field-bg:    rgba(0,0,0,0.04);
+  --field-border:rgba(0,0,0,0.12);
+  --field-text:  #1a1010;
+  --field-ph:    rgba(26,16,16,0.35);
+  --field-opt:   #f0eded;
+
+  --hero-bg-img-opacity: 0.06;
+  --hero-photo-overlay: linear-gradient(
+    to bottom,
+    rgba(244,248,245,0.88) 0%,
+    rgba(244,248,245,0.58) 40%,
+    rgba(244,248,245,0.70) 100%
+  );
+}
+
+/* ── Base ── */
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.35s ease, color 0.35s ease;
+  }
+  ::selection { background: var(--brand); color: #fff; }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-bg); }
+  ::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 3px; }
+}
+
+/* ── Custom component classes ── */
+@layer components {
+
+  .live-dot {
+    @apply w-2 h-2 rounded-full bg-green-400 inline-block;
+    box-shadow: 0 0 6px #4ade80;
+    animation: livePulse 2s ease-in-out infinite;
+  }
+
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: background 0.35s ease, border-color 0.35s ease;
+  }
+
+  .btn-brand {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-200;
+    background: var(--brand);
+  }
+  .btn-brand:hover {
+    background: var(--brand-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--brand-glow);
+  }
+  .btn-brand:active { transform: translateY(0); }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200;
+    color: var(--text-muted);
+    border: 1px solid var(--border-2);
+  }
+  .btn-ghost:hover {
+    border-color: var(--brand);
+    color: var(--text);
+    background: rgba(212,31,38,0.06);
+    transform: translateY(-2px);
+  }
+
+  .field {
+    @apply w-full rounded-xl px-4 py-3 text-sm outline-none transition-all duration-200;
+    background: var(--field-bg);
+    border: 1px solid var(--field-border);
+    color: var(--field-text);
+  }
+  .field::placeholder { color: var(--field-ph); }
+  .field:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px var(--brand-glow);
+  }
+  .field option {
+    background: var(--field-opt);
+    color: var(--field-text);
+  }
+
+  .section-page {
+    @apply min-h-screen w-full;
+    animation: fadeIn 0.45s ease forwards;
+  }
+
+  /* Theme-aware text helpers */
+  .t-primary   { color: var(--text); }
+  .t-muted     { color: var(--text-muted); }
+  .t-faint     { color: var(--text-faint); }
+  .t-divider   { background: var(--border); }
+  .t-surface   { background: var(--surface); }
+  .t-surface-2 { background: var(--surface-2); }
+}
+
+/* ── Keyframes not in tailwind config ── */
+@keyframes hero-crossfade {
+  0%, 38%  { opacity: 1; }
+  48%, 93% { opacity: 0; }
+  100%     { opacity: 1; }
+}
+@keyframes livePulse {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes checkCircle {
+  from { stroke-dashoffset: 166; }
+  to   { stroke-dashoffset: 0; }
+}
+@keyframes checkMark {
+  from { stroke-dashoffset: 50; }
+  to   { stroke-dashoffset: 0; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+@keyframes tlPulse {
+  0%,100% { box-shadow: 0 0 0 0 var(--brand-glow); }
+  50%     { box-shadow: 0 0 0 8px transparent; }
+}
+
+/* checkmark SVG animation */
+.check-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke: #22c55e;
+  fill: none;
+  animation: checkCircle 0.7s ease forwards 0.2s;
+}
+.check-mark {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  stroke-width: 3;
+  stroke: #22c55e;
+  fill: none;
+  animation: checkMark 0.4s ease forwards 0.85s;
+}
+
+/* card shimmer */
+.card-shimmer {
+  background: linear-gradient(90deg, var(--bg-2) 25%, var(--bg-3) 50%, var(--bg-2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+}
+
+/* timeline dot pulse */
+.tl-dot-active {
+  animation: tlPulse 1.5s ease-in-out infinite;
+}
+
+/* ambulance map pin movement */
+.map-amb-pin {
+  position: absolute;
+  animation: ambMapMove 4s ease-in-out infinite alternate;
+}
+@keyframes ambMapMove {
+  0%   { left: 18%; top: 72%; }
+  100% { left: 48%; top: 42%; }
+}
+
+/* route dash animation */
+.route-dash {
+  stroke-dasharray: 8 4;
+  stroke-dashoffset: 0;
+  animation: routeFlow 1.5s linear infinite;
+}
+@keyframes routeFlow {
+  to { stroke-dashoffset: -24; }
+}
+
+/* step transition */
+.step-enter { animation: slideUp 0.4s ease forwards; }
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Light-mode overrides for hardcoded Tailwind white/* classes ── */
+/* Text color overrides */
+[data-theme="light"] .text-white        { color: var(--text) !important; }
+[data-theme="light"] .text-white\/80    { color: var(--text-muted) !important; }
+[data-theme="light"] .text-white\/70    { color: var(--text-muted) !important; }
+[data-theme="light"] .text-white\/60    { color: var(--text-muted) !important; }
+[data-theme="light"] .text-white\/50    { color: var(--text-faint) !important; }
+[data-theme="light"] .text-white\/40    { color: var(--text-faint) !important; }
+[data-theme="light"] .text-white\/30    { color: var(--text-faint) !important; }
+
+/* Border overrides */
+[data-theme="light"] .border-white\/10  { border-color: var(--border) !important; }
+[data-theme="light"] .border-white\/15  { border-color: var(--border-2) !important; }
+
+/* Background overrides */
+[data-theme="light"] .bg-white\/5       { background: var(--surface) !important; }
+[data-theme="light"] .bg-white\/10      { background: var(--surface) !important; }
+[data-theme="light"] .bg-black\/60      { background: rgba(0,0,0,0.5) !important; }
+
