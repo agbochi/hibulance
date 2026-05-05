@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-/* ─── Types ─── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Types Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
 type EmergencyType = 'cardiac' | 'trauma' | 'respiratory' | 'stroke' | 'accident' | 'other'
 type ServiceLevel  = 'basic' | 'advanced' | 'critical'
 type PayMethod     = 'card' | 'momo' | 'insurance'
@@ -28,7 +28,7 @@ const EMERGENCY_TYPES: { type: EmergencyType; label: string; icon: React.ReactNo
   { type: 'other',       label: 'Other',       icon: <InfoIcon /> },
 ]
 
-/* ─── Main component ─── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Main component Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
 export default function RequestSection({ onConfirm }: { onConfirm: () => void }) {
   const [step, setStep]   = useState(1)
   const [form, setForm]   = useState<FormData>({
@@ -58,7 +58,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
     setTimeout(() => { setProcessing(false); onConfirm() }, 2200)
   }
 
-  /* ─── step 1 ─── */
+  /* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ step 1 Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
   const Step1 = (
     <div className="step-enter flex flex-col gap-6">
       <div>
@@ -194,7 +194,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
                   {{ basic: 'Standard ambulance with EMTs', advanced: 'Paramedic + advanced equipment', critical: 'Doctor + ICU-level mobile unit' }[sl]}
                 </div>
               </div>
-              <div className="font-bold text-brand font-display">₦{PRICES[sl].toLocaleString()}</div>
+              <div className="font-bold text-brand font-display">Ã¢â€šÂ¦{PRICES[sl].toLocaleString()}</div>
             </label>
           ))}
         </div>
@@ -212,7 +212,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
     </div>
   )
 
-  /* ─── step 2 ─── */
+  /* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ step 2 Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
   const Step2 = (
     <div className="step-enter flex flex-col gap-6">
       <div>
@@ -226,7 +226,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
         {[
           ['Emergency Type', form.emergencyType.charAt(0).toUpperCase() + form.emergencyType.slice(1)],
           ['Patient', form.patientName],
-          ['Age', form.patientAge ? `${form.patientAge} years` : '—'],
+          ['Age', form.patientAge ? `${form.patientAge} years` : 'Ã¢â‚¬â€'],
           ['Phone', form.phone],
           ['Location', form.location],
           ['Service', { basic: 'Basic Life Support', advanced: 'Advanced Life Support', critical: 'Critical Care' }[form.service]],
@@ -243,16 +243,16 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
       <div className="glass rounded-2xl p-5 flex flex-col gap-3">
         <div className="flex justify-between text-sm">
           <span className="text-white/60">Service Fee</span>
-          <span className="text-white">₦{price.toLocaleString()}</span>
+          <span className="text-white">Ã¢â€šÂ¦{price.toLocaleString()}</span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-white/60">Processing Fee</span>
-          <span className="text-white">₦500</span>
+          <span className="text-white">Ã¢â€šÂ¦500</span>
         </div>
         <div className="h-px bg-white/10" />
         <div className="flex justify-between font-bold">
           <span className="text-white">Total</span>
-          <span className="text-brand text-lg font-display">₦{total.toLocaleString()}</span>
+          <span className="text-brand text-lg font-display">Ã¢â€šÂ¦{total.toLocaleString()}</span>
         </div>
       </div>
 
@@ -267,7 +267,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
     </div>
   )
 
-  /* ─── step 3 ─── */
+  /* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ step 3 Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
   const Step3 = (
     <div className="step-enter flex flex-col gap-6">
       <div>
@@ -310,7 +310,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
             <div className="absolute top-4 left-5 w-8 h-6 rounded-sm bg-yellow-300/80"
               style={{ background: 'linear-gradient(135deg, #fcd34d, #f59e0b)' }} />
             <div className="absolute bottom-12 left-5 text-white font-mono text-base tracking-[0.2em] font-medium">
-              {card.number || '•••• •••• •••• ••••'}
+              {card.number || 'Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢ Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢ Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢ Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢'}
             </div>
             <div className="absolute bottom-4 left-5 right-5 flex justify-between items-end">
               <div>
@@ -334,7 +334,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
             <InputField label="Expiry" id="exp" placeholder="MM/YY"
               value={card.expiry} onChange={v => setCard(c => ({ ...c, expiry: fmtExpiry(v) }))} icon={<CalIcon />} />
           </div>
-          <InputField label="CVV" id="cvv" type="password" placeholder="•••"
+          <InputField label="CVV" id="cvv" type="password" placeholder="Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢"
             value={card.cvv} onChange={v => setCard(c => ({ ...c, cvv: v.slice(0,3) }))} icon={<LockIcon />} />
         </div>
       )}
@@ -374,7 +374,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
               value={ins.provider}
               onChange={e => setIns(i => ({ ...i, provider: e.target.value }))}
             >
-              <option value="">Select provider…</option>
+              <option value="">Select providerÃ¢â‚¬Â¦</option>
               {['NHIS', 'AXA Mansard Health', 'Leadway Health', 'Hygeia HMO', 'Reliance HMO'].map(p => (
                 <option key={p}>{p}</option>
               ))}
@@ -388,13 +388,13 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
       {/* Security badge */}
       <div className="flex items-center justify-center gap-2 text-xs text-white/40 py-1">
         <svg className="w-3.5 h-3.5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-        256-bit SSL Encrypted · PCI DSS Compliant
+        256-bit SSL Encrypted Ã‚Â· PCI DSS Compliant
       </div>
 
       {/* Amount due */}
       <div className="glass rounded-xl p-4 flex justify-between items-center">
         <span className="text-sm text-white/60">Amount Due</span>
-        <span className="font-display font-bold text-brand text-xl">₦{total.toLocaleString()}</span>
+        <span className="font-display font-bold text-brand text-xl">Ã¢â€šÂ¦{total.toLocaleString()}</span>
       </div>
 
       <div className="flex gap-3">
@@ -405,12 +405,12 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
           onClick={handlePay}
           disabled={processing}
           className="btn-brand flex-1 justify-center py-3.5 font-bold relative overflow-hidden"
-          style={{ boxShadow: '0 8px 24px rgba(0,135,81,0.3)' }}
+          style={{ boxShadow: '0 8px 24px rgba(212,31,38,0.3)' }}
         >
           {processing ? (
             <span className="flex items-center gap-2">
               <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" opacity="0.25"/><path d="M12 2a10 10 0 010 20" opacity="0.75"/></svg>
-              Processing…
+              ProcessingÃ¢â‚¬Â¦
             </span>
           ) : (
             <>
@@ -423,7 +423,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
     </div>
   )
 
-  /* ─── Render ─── */
+  /* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Render Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
   return (
     <section className="section-page pt-16">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 grid lg:grid-cols-2 gap-10 items-start">
@@ -440,7 +440,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
                     step > s  ? 'bg-green-500 text-white' :
                                 'bg-white/10 text-white/40'
                   }`}>
-                    {step > s ? '✓' : s}
+                    {step > s ? 'Ã¢Å“â€œ' : s}
                   </div>
                   <span className={`text-[10px] ${step === s ? 'text-brand' : 'text-white/30'}`}>
                     {['Details', 'Review', 'Payment'][i]}
@@ -467,12 +467,12 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
             <InfoCard
               icon={<svg className="w-5 h-5 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>}
               title="Average ETA"
-              value="4–7 minutes"
+              value="4Ã¢â‚¬â€œ7 minutes"
             />
             <InfoCard
               icon={<svg className="w-5 h-5 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>}
               title="Nearest Unit"
-              value="AMB-07 · 2.1 km"
+              value="AMB-07 Ã‚Â· 2.1 km"
             />
           </div>
         </div>
@@ -481,7 +481,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
   )
 }
 
-/* ─── Sub-components ─── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Sub-components Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
 function InputField({
   label, id, type = 'text', placeholder, value, onChange, icon,
 }: {
@@ -599,7 +599,7 @@ function MapMock() {
   )
 }
 
-/* ─── Icons ─── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Icons Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
 function HeartIcon()    { return <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> }
 function ShieldIcon()   { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> }
 function WindIcon()     { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A2.5 2.5 0 1119.5 12H2"/></svg> }

@@ -29,7 +29,7 @@ export default function Footer({ navigate }: { navigate: (s: ActiveSection) => v
       </div>
 
       <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-white/[0.04] text-center text-xs text-white/25">
-        © 2026 Hibulance. All rights reserved. Built for Nigeria.
+        Ã‚Â© 2026 Hibulance. All rights reserved. Built for Nigeria.
       </div>
     </footer>
   )

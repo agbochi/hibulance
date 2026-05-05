@@ -30,13 +30,13 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
   return (
     <section className="section-page relative pt-16 flex flex-col justify-center overflow-hidden min-h-screen">
 
-      {/* ── Crossfading photo background ── */}
+      {/* Ã¢â€â‚¬Ã¢â€â‚¬ Crossfading photo background Ã¢â€â‚¬Ã¢â€â‚¬ */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        {/* Photo 1 — Nigerian paramedics */}
+        {/* Photo 1 Ã¢â‚¬â€ Nigerian paramedics */}
         <div className="absolute inset-0" style={{ animation: 'hero-crossfade 14s ease-in-out infinite' }}>
           <Image src="/med1.jpg" alt="" fill className="object-cover object-center" priority />
         </div>
-        {/* Photo 2 — Medical instruments */}
+        {/* Photo 2 Ã¢â‚¬â€ Medical instruments */}
         <div className="absolute inset-0" style={{ opacity: 0, animation: 'hero-crossfade 14s ease-in-out infinite 7s' }}>
           <Image src="/med2.jpg" alt="" fill className="object-cover object-center" />
         </div>
@@ -67,7 +67,7 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
             <br />
             <span
               className="text-brand"
-              style={{ textShadow: '0 0 40px rgba(0,135,81,0.45)' }}
+              style={{ textShadow: '0 0 40px rgba(212,31,38,0.45)' }}
             >
               Life&#x2011;Saving.
             </span>
@@ -75,7 +75,7 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
 
           <p className="text-lg leading-relaxed max-w-md" style={{ color: 'var(--text-muted)' }}>
             Request a certified ambulance in seconds. Our fleet of paramedics is on
-            standby — reaching you anywhere in the city within minutes.
+            standby Ã¢â‚¬â€ reaching you anywhere in the city within minutes.
           </p>
 
           {/* CTA buttons */}
@@ -83,7 +83,7 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
             <button
               onClick={() => navigate('request')}
               className="btn-brand text-base px-7 py-3.5 text-lg font-bold shadow-lg"
-              style={{ boxShadow: '0 8px 32px rgba(0,135,81,0.35)' }}
+              style={{ boxShadow: '0 8px 32px rgba(212,31,38,0.35)' }}
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
@@ -111,14 +111,14 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
           </div>
         </div>
 
-        {/* RIGHT — Floating ambulance card */}
+        {/* RIGHT Ã¢â‚¬â€ Floating ambulance card */}
         <div className="flex justify-center items-center relative">
           {/* Pulse rings */}
           <div className="absolute rounded-full bg-brand/20 w-72 h-72 animate-pulse-ring" />
           <div className="absolute rounded-full bg-brand/15 w-72 h-72 animate-pulse-ring [animation-delay:0.7s]" />
 
           <div className="animate-float relative z-10 glass rounded-3xl p-6 w-80 shadow-2xl"
-            style={{ boxShadow: '0 20px 60px rgba(0,135,81,0.2), 0 0 0 1px var(--border)' }}>
+            style={{ boxShadow: '0 20px 60px rgba(212,31,38,0.2), 0 0 0 1px var(--border)' }}>
             {/* Header */}
             <div className="flex items-center gap-3 mb-5">
               <div className="w-11 h-11 rounded-xl bg-brand flex items-center justify-center flex-shrink-0">
@@ -129,7 +129,7 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
                 <div className="font-bold font-display" style={{ color: 'var(--text)' }}>AMB-07</div>
               </div>
               <div className="flex gap-1.5">
-                <div className="w-3.5 h-3.5 rounded-full animate-siren-green" />
+                <div className="w-3.5 h-3.5 rounded-full animate-siren-red" />
                 <div className="w-3.5 h-3.5 rounded-full animate-siren-blue [animation-delay:0.5s]" />
               </div>
             </div>
@@ -152,9 +152,9 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
               </div>
               <div className="flex-1">
               <div className="text-sm font-semibold" style={{ color: 'var(--text)' }}>Dr. Emeka Okafor</div>
-              <div className="text-xs" style={{ color: 'var(--text-muted)' }}>Lead Paramedic · Lagos</div>
+              <div className="text-xs" style={{ color: 'var(--text-muted)' }}>Lead Paramedic Ã‚Â· Lagos</div>
               </div>
-              <div className="text-yellow-400 text-xs font-semibold">★ 4.9</div>
+              <div className="text-yellow-400 text-xs font-semibold">Ã¢Ëœâ€¦ 4.9</div>
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@ function HeroBgScene() {
         </linearGradient>
         <radialGradient id="moonGlow" cx="75%" cy="18%" r="12%">
           <stop offset="0%" stopColor="#66bb88" stopOpacity="0.5"/>
-          <stop offset="100%" stopColor="#008751" stopOpacity="0"/>
+          <stop offset="100%" stopColor="#D41F26" stopOpacity="0"/>
         </radialGradient>
       </defs>
 
@@ -216,11 +216,11 @@ function HeroBgScene() {
 
       {/* Moon */}
       <circle cx="1080" cy="130" r="45" fill="#061409" opacity="0.9"/>
-      <circle cx="1080" cy="130" r="40" fill="#008751" opacity="0.12"/>
+      <circle cx="1080" cy="130" r="40" fill="#D41F26" opacity="0.12"/>
       <circle cx="1096" cy="118" r="28" fill="#040e06" opacity="0.6"/>
 
-      {/* ── Nigerian flag silhouette (subtle, far background) ── */}
-      {/* Far buildings — green-tinged dark */}
+      {/* Ã¢â€â‚¬Ã¢â€â‚¬ Nigerian flag silhouette (subtle, far background) Ã¢â€â‚¬Ã¢â€â‚¬ */}
+      {/* Far buildings Ã¢â‚¬â€ green-tinged dark */}
       <rect x="0"    y="480" width="60"  height="420" fill="#0a1e0c" opacity="0.55"/>
       <rect x="55"   y="520" width="45"  height="380" fill="#091a0b" opacity="0.55"/>
       <rect x="95"   y="460" width="70"  height="440" fill="#0a1e0c" opacity="0.55"/>
@@ -247,7 +247,7 @@ function HeroBgScene() {
       <rect x="1340" y="445" width="80"  height="455" fill="#0a1e0c" opacity="0.55"/>
       <rect x="1415" y="470" width="50"  height="430" fill="#0a1a0c" opacity="0.55"/>
 
-      {/* Building windows — Nigerian green tint */}
+      {/* Building windows Ã¢â‚¬â€ Nigerian green tint */}
       {[
         [15,510],[30,510],[15,535],[30,535],[15,560],[30,560],
         [100,480],[115,480],[100,505],[115,505],[100,530],
@@ -260,32 +260,32 @@ function HeroBgScene() {
         [1350,465],[1365,465],[1350,490],[1365,490],[1350,515],
       ].map(([x, y], i) => (
         <rect key={i} x={x} y={y} width="8" height="6" rx="1"
-          fill="#008751" opacity={0.18 + (i % 4) * 0.07}/>
+          fill="#D41F26" opacity={0.18 + (i % 4) * 0.07}/>
       ))}
 
       {/* Road / ground */}
       <rect x="0" y="740" width="1440" height="160" fill="#060e07" opacity="0.85"/>
       <rect x="0" y="755" width="1440" height="3" fill="#0a1a0c" opacity="0.6"/>
       <rect x="0" y="810" width="1440" height="3" fill="#0a1a0c" opacity="0.6"/>
-      {/* Centre dashes — Nigerian green */}
+      {/* Centre dashes Ã¢â‚¬â€ Nigerian green */}
       {Array.from({ length: 18 }).map((_, i) => (
         <rect key={i} x={i * 80 + 10} y="780" width="50" height="4" rx="2"
-          fill="#008751" opacity="0.3"/>
+          fill="#D41F26" opacity="0.3"/>
       ))}
 
-      {/* ── Nigerian ambulance (white body, green cross/stripe) ── */}
+      {/* Ã¢â€â‚¬Ã¢â€â‚¬ Nigerian ambulance (white body, green cross/stripe) Ã¢â€â‚¬Ã¢â€â‚¬ */}
       <g transform="translate(320, 700)">
-        {/* Body — white/light */}
+        {/* Body Ã¢â‚¬â€ white/light */}
         <rect x="0" y="0" width="160" height="80" rx="8" fill="#d8ede0" opacity="0.9"/>
         {/* Cab */}
         <rect x="100" y="-25" width="60" height="45" rx="6" fill="#d8ede0" opacity="0.9"/>
         {/* Nigerian green stripe */}
-        <rect x="0" y="20" width="160" height="12" fill="#008751" opacity="0.7"/>
-        {/* Green cross — Nigerian health symbol */}
-        <rect x="35" y="10" width="30" height="10" rx="2" fill="#008751" opacity="0.8"/>
-        <rect x="45" y="4" width="10" height="22" rx="2" fill="#008751" opacity="0.8"/>
+        <rect x="0" y="20" width="160" height="12" fill="#D41F26" opacity="0.7"/>
+        {/* Green cross Ã¢â‚¬â€ Nigerian health symbol */}
+        <rect x="35" y="10" width="30" height="10" rx="2" fill="#D41F26" opacity="0.8"/>
+        <rect x="45" y="4" width="10" height="22" rx="2" fill="#D41F26" opacity="0.8"/>
         {/* "AMBULANCE" text bar */}
-        <rect x="0" y="55" width="95" height="12" fill="#006B3C" opacity="0.4"/>
+        <rect x="0" y="55" width="95" height="12" fill="#a01219" opacity="0.4"/>
         {/* Windshield */}
         <rect x="110" y="-20" width="44" height="30" rx="4" fill="#88ddaa" opacity="0.2"/>
         {/* Wheels */}
@@ -293,61 +293,61 @@ function HeroBgScene() {
         <circle cx="30" cy="82" r="10" fill="#122015"/>
         <circle cx="130" cy="82" r="18" fill="#0a1a0c"/>
         <circle cx="130" cy="82" r="10" fill="#122015"/>
-        {/* Siren lights — green + blue (Nigerian) */}
-        <rect x="40" y="-6" width="16" height="8" rx="3" fill="#008751" opacity="0.95"/>
+        {/* Siren lights Ã¢â‚¬â€ green + blue (Nigerian) */}
+        <rect x="40" y="-6" width="16" height="8" rx="3" fill="#D41F26" opacity="0.95"/>
         <rect x="60" y="-6" width="16" height="8" rx="3" fill="#3b82f6" opacity="0.75"/>
         {/* Siren glow */}
-        <ellipse cx="48" cy="-2" rx="20" ry="10" fill="#008751" opacity="0.15"/>
+        <ellipse cx="48" cy="-2" rx="20" ry="10" fill="#D41F26" opacity="0.15"/>
         {/* Motion blur */}
-        <rect x="-60" y="30" width="55" height="3" rx="1.5" fill="#008751" opacity="0.15"/>
-        <rect x="-80" y="40" width="70" height="2" rx="1" fill="#008751" opacity="0.10"/>
-        <rect x="-45" y="50" width="40" height="2" rx="1" fill="#008751" opacity="0.08"/>
+        <rect x="-60" y="30" width="55" height="3" rx="1.5" fill="#D41F26" opacity="0.15"/>
+        <rect x="-80" y="40" width="70" height="2" rx="1" fill="#D41F26" opacity="0.10"/>
+        <rect x="-45" y="50" width="40" height="2" rx="1" fill="#D41F26" opacity="0.08"/>
       </g>
 
-      {/* ── Second distant ambulance ── */}
+      {/* Ã¢â€â‚¬Ã¢â€â‚¬ Second distant ambulance Ã¢â€â‚¬Ã¢â€â‚¬ */}
       <g transform="translate(980, 715)" opacity="0.6">
         <rect x="0" y="0" width="110" height="55" rx="6" fill="#c8e8d5"/>
         <rect x="70" y="-18" width="42" height="32" rx="4" fill="#c8e8d5"/>
-        <rect x="0" y="14" width="110" height="8" fill="#008751" opacity="0.6"/>
+        <rect x="0" y="14" width="110" height="8" fill="#D41F26" opacity="0.6"/>
         <circle cx="20" cy="57" r="13" fill="#0a1a0c"/>
         <circle cx="90" cy="57" r="13" fill="#0a1a0c"/>
-        <rect x="28" y="-4" width="11" height="6" rx="2" fill="#008751" opacity="0.9"/>
+        <rect x="28" y="-4" width="11" height="6" rx="2" fill="#D41F26" opacity="0.9"/>
         <rect x="42" y="-4" width="11" height="6" rx="2" fill="#3b82f6" opacity="0.6"/>
       </g>
 
-      {/* ── Nigerian hospital building (green cross) ── */}
+      {/* Ã¢â€â‚¬Ã¢â€â‚¬ Nigerian hospital building (green cross) Ã¢â€â‚¬Ã¢â€â‚¬ */}
       <rect x="1050" y="320" width="280" height="580" fill="#0d2410" opacity="0.75"/>
       {/* Hospital green cross sign */}
-      <rect x="1155" y="350" width="70" height="24" rx="4" fill="#008751" opacity="0.6"/>
-      <rect x="1177" y="332" width="26" height="60" rx="4" fill="#008751" opacity="0.6"/>
+      <rect x="1155" y="350" width="70" height="24" rx="4" fill="#D41F26" opacity="0.6"/>
+      <rect x="1177" y="332" width="26" height="60" rx="4" fill="#D41F26" opacity="0.6"/>
       {/* "GENERAL HOSPITAL" sign area */}
-      <rect x="1060" y="395" width="260" height="16" rx="3" fill="#006B3C" opacity="0.3"/>
+      <rect x="1060" y="395" width="260" height="16" rx="3" fill="#a01219" opacity="0.3"/>
       {/* Hospital windows grid */}
       {Array.from({ length: 5 }).map((_, row) =>
         Array.from({ length: 4 }).map((_, col) => (
           <rect key={`hw-${row}-${col}`}
             x={1065 + col * 62} y={420 + row * 72}
             width="38" height="48" rx="3"
-            fill="#008751" opacity={0.07 + (row + col) % 3 * 0.05}/>
+            fill="#D41F26" opacity={0.07 + (row + col) % 3 * 0.05}/>
         ))
       )}
       {/* Entrance */}
       <rect x="1148" y="780" width="84" height="120" rx="4" fill="#061409" opacity="0.9"/>
-      <rect x="1148" y="780" width="84" height="8" fill="#008751" opacity="0.4"/>
+      <rect x="1148" y="780" width="84" height="8" fill="#D41F26" opacity="0.4"/>
 
       {/* Ground glow from ambulance lights */}
-      <ellipse cx="400" cy="755" rx="120" ry="20" fill="#008751" opacity="0.07"/>
-      <ellipse cx="1035" cy="758" rx="80" ry="15" fill="#008751" opacity="0.05"/>
+      <ellipse cx="400" cy="755" rx="120" ry="20" fill="#D41F26" opacity="0.07"/>
+      <ellipse cx="1035" cy="758" rx="80" ry="15" fill="#D41F26" opacity="0.05"/>
 
       {/* Vignette fades */}
       <defs>
         <linearGradient id="vigTop" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%"  stopColor="#080e09" stopOpacity="1"/>
-          <stop offset="35%" stopColor="#080e09" stopOpacity="0"/>
+          <stop offset="0%"  stopColor="#080808" stopOpacity="1"/>
+          <stop offset="35%" stopColor="#080808" stopOpacity="0"/>
         </linearGradient>
         <linearGradient id="vigBot" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="60%" stopColor="#080e09" stopOpacity="0"/>
-          <stop offset="100%" stopColor="#080e09" stopOpacity="1"/>
+          <stop offset="60%" stopColor="#080808" stopOpacity="0"/>
+          <stop offset="100%" stopColor="#080808" stopOpacity="1"/>
         </linearGradient>
       </defs>
       <rect width="1440" height="900" fill="url(#vigTop)"/>

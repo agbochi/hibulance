@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── CSS variables — Dark mode (default) ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ CSS variables Ã¢â‚¬â€ Dark mode (default) Ã¢â€â‚¬Ã¢â€â‚¬ */
 :root,
 [data-theme="dark"] {
-  --brand:        #008751;
-  --brand-dark:   #006B3C;
-  --brand-light:  #1a9e63;
-  --brand-glow:   rgba(0, 135, 81, 0.35);
+  --brand:        #D41F26;
+  --brand-dark:   #a01219;
+  --brand-light:  #e84a52;
+  --brand-glow:   rgba(212, 31, 38, 0.35);
 
-  --bg:           #080e09;
-  --bg-2:         #0e1510;
-  --bg-3:         #141e15;
+  --bg:           #080808;
+  --bg-2:         #0e0808;
+  --bg-3:         #140808;
   --surface:      rgba(255,255,255,0.04);
   --surface-2:    rgba(255,255,255,0.07);
   --border:       rgba(255,255,255,0.08);
@@ -20,16 +20,16 @@
   --text:         #f0f0f0;
   --text-muted:   rgba(240,240,240,0.55);
   --text-faint:   rgba(240,240,240,0.3);
-  --scrollbar-bg: #0e1510;
+  --scrollbar-bg: #0e0808;
 
   --glass-bg:    rgba(255,255,255,0.04);
   --glass-border:rgba(255,255,255,0.08);
 
-  --map-base:    #0c1208;
-  --map-road:    #161e10;
-  --map-road-2:  #1e2a18;
-  --map-block:   #192213;
-  --map-overlay-from: #080e09;
+  --map-base:    #0c0808;
+  --map-road:    #160808;
+  --map-road-2:  #1e0a0a;
+  --map-block:   #190808;
+  --map-overlay-from: #080808;
 
   --field-bg:    rgba(255,255,255,0.05);
   --field-border:rgba(255,255,255,0.10);
@@ -40,34 +40,34 @@
   --hero-bg-img-opacity: 0.08;
   --hero-photo-overlay: linear-gradient(
     to bottom,
-    rgba(8,14,9,0.88) 0%,
-    rgba(8,14,9,0.58) 40%,
-    rgba(8,14,9,0.70) 100%
+    rgba(8,8,8,0.88) 0%,
+    rgba(8,8,8,0.58) 40%,
+    rgba(8,8,8,0.70) 100%
   );
 }
 
-/* ── Light mode ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Light mode Ã¢â€â‚¬Ã¢â€â‚¬ */
 [data-theme="light"] {
-  --bg:           #f4f8f5;
-  --bg-2:         #ecf3ee;
-  --bg-3:         #e4ede6;
+  --bg:           #fff5f5;
+  --bg-2:         #fceaea;
+  --bg-3:         #f9dede;
   --surface:      rgba(255,255,255,0.75);
   --surface-2:    rgba(255,255,255,0.90);
   --border:       rgba(0,0,0,0.08);
   --border-2:     rgba(0,0,0,0.14);
-  --text:         #0d1f12;
-  --text-muted:   rgba(13,31,18,0.60);
-  --text-faint:   rgba(13,31,18,0.38);
-  --scrollbar-bg: #e4ede6;
+  --text:         #1a0808;
+  --text-muted:   rgba(26,8,8,0.60);
+  --text-faint:   rgba(26,8,8,0.38);
+  --scrollbar-bg: #f9dede;
 
   --glass-bg:    rgba(255,255,255,0.70);
   --glass-border:rgba(0,0,0,0.08);
 
-  --map-base:    #e8f0ea;
-  --map-road:    #d8e4da;
-  --map-road-2:  #cddacf;
-  --map-block:   #dde8df;
-  --map-overlay-from: #f4f8f5;
+  --map-base:    #f5e8e8;
+  --map-road:    #f2d0d0;
+  --map-road-2:  #edc8c8;
+  --map-block:   #f5d9d9;
+  --map-overlay-from: #fff5f5;
 
   --field-bg:    rgba(0,0,0,0.04);
   --field-border:rgba(0,0,0,0.12);
@@ -78,13 +78,13 @@
   --hero-bg-img-opacity: 0.06;
   --hero-photo-overlay: linear-gradient(
     to bottom,
-    rgba(244,248,245,0.88) 0%,
-    rgba(244,248,245,0.58) 40%,
-    rgba(244,248,245,0.70) 100%
+    rgba(255,245,245,0.88) 0%,
+    rgba(255,245,245,0.58) 40%,
+    rgba(255,245,245,0.70) 100%
   );
 }
 
-/* ── Base ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Base Ã¢â€â‚¬Ã¢â€â‚¬ */
 @layer base {
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; font-size: 13px; }
@@ -102,7 +102,7 @@
   ::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 3px; }
 }
 
-/* ── Custom component classes ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Custom component classes Ã¢â€â‚¬Ã¢â€â‚¬ */
 @layer components {
 
   .live-dot {
@@ -173,7 +173,7 @@
   .t-surface-2 { background: var(--surface-2); }
 }
 
-/* ── Keyframes not in tailwind config ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Keyframes not in tailwind config Ã¢â€â‚¬Ã¢â€â‚¬ */
 @keyframes hero-crossfade {
   0%, 38%  { opacity: 1; }
   48%, 93% { opacity: 0; }
@@ -261,7 +261,7 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Light-mode overrides for hardcoded Tailwind white/* classes ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Light-mode overrides for hardcoded Tailwind white/* classes Ã¢â€â‚¬Ã¢â€â‚¬ */
 /* Text color overrides */
 [data-theme="light"] .text-white        { color: var(--text) !important; }
 [data-theme="light"] .text-white\/80    { color: var(--text-muted) !important; }

@@ -6,13 +6,13 @@ const DEMO = {
   status: 'En Route',
   unit: 'AMB-07',
   paramedic: 'Dr. Emeka Okafor',
-  role: 'Lead Paramedic · Lagos',
+  role: 'Lead Paramedic Ã‚Â· Lagos',
   eta: '3 min',
   steps: [
     { label: 'Request Received',     time: '10:32 AM', done: true,    active: false },
     { label: 'Ambulance Dispatched', time: '10:34 AM', done: true,    active: false },
     { label: 'En Route to You',      time: 'ETA 3 min',done: false,   active: true  },
-    { label: 'Arrived',              time: '—',         done: false,  active: false },
+    { label: 'Arrived',              time: 'Ã¢â‚¬â€',         done: false,  active: false },
   ],
 }
 
@@ -55,7 +55,7 @@ export default function TrackSection() {
           <button
             onClick={handleTrack}
             className="btn-brand px-6 py-3.5 font-bold"
-            style={{ boxShadow: '0 6px 20px rgba(0,135,81,0.3)' }}
+            style={{ boxShadow: '0 6px 20px rgba(212,31,38,0.3)' }}
           >
             Track
           </button>
@@ -72,7 +72,7 @@ export default function TrackSection() {
         {/* Tracking result */}
         {searched && (
           <div className="glass rounded-3xl p-6 md:p-8 shadow-2xl animate-slide-up"
-            style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,135,81,0.1)' }}>
+            style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,31,38,0.1)' }}>
 
             {/* Booking header */}
             <div className="flex items-start justify-between mb-8">
@@ -122,7 +122,7 @@ export default function TrackSection() {
 
             {/* ETA card */}
             <div className="rounded-2xl p-4 mb-6"
-              style={{ background: 'linear-gradient(135deg, rgba(0,135,81,0.15), rgba(0,135,81,0.05))', border: '1px solid rgba(0,135,81,0.2)' }}>
+              style={{ background: 'linear-gradient(135deg, rgba(212,31,38,0.15), rgba(212,31,38,0.05))', border: '1px solid rgba(212,31,38,0.2)' }}>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-brand flex items-center justify-center flex-shrink-0">
                   <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -145,7 +145,7 @@ export default function TrackSection() {
               </div>
               <div className="flex-1">
                 <div className="font-semibold text-white">{DEMO.paramedic}</div>
-                <div className="text-xs text-white/50">{DEMO.role} · {DEMO.unit}</div>
+                <div className="text-xs text-white/50">{DEMO.role} Ã‚Â· {DEMO.unit}</div>
               </div>
               <a
                 href="tel:+233000000000"

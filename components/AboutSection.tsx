@@ -29,7 +29,7 @@ export default function AboutSection() {
         </svg>
       ),
       title: 'Flexible Payment',
-      desc:  'Pay by card, mobile money, or insurance — all secure and encrypted.',
+      desc:  'Pay by card, mobile money, or insurance Ã¢â‚¬â€ all secure and encrypted.',
     },
   ]
 
@@ -54,7 +54,7 @@ export default function AboutSection() {
           <p className="leading-relaxed" style={{ color: 'var(--text-muted)' }}>
             Hibulance bridges the critical gap between emergencies and medical response.
             We partner with certified ambulance operators, hospitals, and paramedics to
-            deliver rapid, reliable care — at the tap of a button.
+            deliver rapid, reliable care Ã¢â‚¬â€ at the tap of a button.
           </p>
           <div className="flex flex-col gap-4 mt-2">
             {features.map(f => (
@@ -75,7 +75,7 @@ export default function AboutSection() {
         <div className="flex flex-col items-center gap-8">
           <div
             className="w-52 h-52 rounded-full overflow-hidden shadow-2xl"
-            style={{ boxShadow: '0 0 80px rgba(0,135,81,0.4), 0 20px 60px rgba(0,0,0,0.5)' }}
+            style={{ boxShadow: '0 0 80px rgba(212,31,38,0.4), 0 20px 60px rgba(0,0,0,0.5)' }}
           >
             <Image
               src="/logo.jpeg"

@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brand: { DEFAULT: '#008751', dark: '#006B3C', light: '#1a9e63' },
+        brand: { DEFAULT: '#D41F26', dark: '#a01219', light: '#e84a52' },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
@@ -33,9 +33,9 @@ const config: Config = {
           '0%':   { transform: 'scale(1)', opacity: '0.7' },
           '100%': { transform: 'scale(2.8)', opacity: '0' },
         },
-        sirenGreen: {
-          '0%,49%,100%': { backgroundColor: '#008751', boxShadow: '0 0 14px #008751' },
-          '50%,99%':     { backgroundColor: 'rgba(0,135,81,0.1)', boxShadow: 'none' },
+        sirenRed: {
+          '0%,49%,100%': { backgroundColor: '#D41F26', boxShadow: '0 0 14px #D41F26' },
+          '50%,99%':     { backgroundColor: 'rgba(212,31,38,0.1)', boxShadow: 'none' },
         },
         sirenBlue: {
           '0%,49%,100%': { backgroundColor: 'rgba(59,130,246,0.15)', boxShadow: 'none' },
@@ -68,7 +68,7 @@ const config: Config = {
         'blob-2':       'blobTwo 13s ease-in-out infinite',
         'float':        'floatY 3.2s ease-in-out infinite',
         'pulse-ring':   'pulseRing 2s ease-out infinite',
-        'siren-green':  'sirenGreen 1s ease-in-out infinite',
+        'siren-red':  'sirenRed 1s ease-in-out infinite',
         'siren-blue':   'sirenBlue 1s ease-in-out infinite',
         'progress':     'progressFill 2s ease forwards',
         'slide-up':     'slideUp 0.55s ease forwards',
