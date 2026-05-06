@@ -220,7 +220,7 @@ function HeroBgScene() {
       <circle cx="1096" cy="118" r="28" fill="#080408" opacity="0.6"/>
 
       {/* ── Nigerian flag silhouette (subtle, far background) ── */}
-      {/* Far buildings — dark */
+      {/* Far buildings — dark */}
       <rect x="0"    y="480" width="60"  height="420" fill="#0e0808" opacity="0.55"/>
       <rect x="55"   y="520" width="45"  height="380" fill="#0c0808" opacity="0.55"/>
       <rect x="95"   y="460" width="70"  height="440" fill="#0e0808" opacity="0.55"/>
@@ -247,7 +247,7 @@ function HeroBgScene() {
       <rect x="1340" y="445" width="80"  height="455" fill="#0e0808" opacity="0.55"/>
       <rect x="1415" y="470" width="50"  height="430" fill="#0e0808" opacity="0.55"/>
 
-      {/* Building windows */
+      {/* Building windows */}
       {[
         [15,510],[30,510],[15,535],[30,535],[15,560],[30,560],
         [100,480],[115,480],[100,505],[115,505],[100,530],
@@ -267,21 +267,21 @@ function HeroBgScene() {
       <rect x="0" y="740" width="1440" height="160" fill="#0e0808" opacity="0.85"/>
       <rect x="0" y="755" width="1440" height="3" fill="#0e0808" opacity="0.6"/>
       <rect x="0" y="810" width="1440" height="3" fill="#0e0808" opacity="0.6"/>
-      {/* Centre dashes */
+      {/* Centre dashes */}
       {Array.from({ length: 18 }).map((_, i) => (
         <rect key={i} x={i * 80 + 10} y="780" width="50" height="4" rx="2"
           fill="#D41F26" opacity="0.3"/>
       ))}
 
-      {/* ── Ambulance ── */
+      {/* ── Ambulance ── */}
       <g transform="translate(320, 700)">
         {/* Body — white/light */}
         <rect x="0" y="0" width="160" height="80" rx="8" fill="#edd8d8" opacity="0.9"/>
         {/* Cab */}
         <rect x="100" y="-25" width="60" height="45" rx="6" fill="#edd8d8" opacity="0.9"/>
-        {/* Stripe */
+        {/* Stripe */}
         <rect x="0" y="20" width="160" height="12" fill="#D41F26" opacity="0.7"/>
-        {/* Red cross */
+        {/* Red cross */}
         <rect x="35" y="10" width="30" height="10" rx="2" fill="#D41F26" opacity="0.8"/>
         <rect x="45" y="4" width="10" height="22" rx="2" fill="#D41F26" opacity="0.8"/>
         {/* "AMBULANCE" text bar */}
@@ -293,7 +293,7 @@ function HeroBgScene() {
         <circle cx="30" cy="82" r="10" fill="#120808"/>
         <circle cx="130" cy="82" r="18" fill="#0a0808"/>
         <circle cx="130" cy="82" r="10" fill="#120808"/>
-        {/* Siren lights — red + blue */
+        {/* Siren lights — red + blue */}
         <rect x="40" y="-6" width="16" height="8" rx="3" fill="#D41F26" opacity="0.95"/>
         <rect x="60" y="-6" width="16" height="8" rx="3" fill="#3b82f6" opacity="0.75"/>
         {/* Siren glow */}
@@ -315,7 +315,7 @@ function HeroBgScene() {
         <rect x="42" y="-4" width="11" height="6" rx="2" fill="#3b82f6" opacity="0.6"/>
       </g>
 
-      {/* ── Hospital building ── */
+      {/* ── Hospital building ── */}
       <rect x="1050" y="320" width="280" height="580" fill="#140808" opacity="0.75"/>
       {/* Hospital red cross sign */}
       <rect x="1155" y="350" width="70" height="24" rx="4" fill="#D41F26" opacity="0.6"/>
