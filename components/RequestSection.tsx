@@ -387,7 +387,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
 
       {/* Security badge */}
       <div className="flex items-center justify-center gap-2 text-xs text-white/40 py-1">
-        <svg className="w-3.5 h-3.5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <svg className="w-3.5 h-3.5 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
         256-bit SSL Encrypted · PCI DSS Compliant
       </div>
 
@@ -437,7 +437,7 @@ export default function RequestSection({ onConfirm }: { onConfirm: () => void })
                 <div className="flex flex-col items-center gap-1">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
                     step === s ? 'bg-brand text-white shadow-lg' :
-                    step > s  ? 'bg-green-500 text-white' :
+                    step > s  ? 'bg-brand text-white' :
                                 'bg-white/10 text-white/40'
                   }`}>
                     {step > s ? '✓' : s}

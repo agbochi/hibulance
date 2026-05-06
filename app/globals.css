@@ -106,8 +106,9 @@
 @layer components {
 
   .live-dot {
-    @apply w-2 h-2 rounded-full bg-green-400 inline-block;
-    box-shadow: 0 0 6px #4ade80;
+    @apply w-2 h-2 rounded-full inline-block;
+    background: #D41F26;
+    box-shadow: 0 0 6px rgba(212,31,38,0.7);
     animation: livePulse 2s ease-in-out infinite;
   }
 
@@ -121,13 +122,13 @@
 
   .btn-brand {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200;
-    background: #008751;
+    background: var(--brand);
     color: #ffffff;
   }
   .btn-brand:hover {
-    background: #006B3C;
+    background: var(--brand-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,135,81,0.35);
+    box-shadow: 0 8px 24px var(--brand-glow);
   }
   .btn-brand:active { transform: translateY(0); }
 
