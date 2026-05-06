@@ -64,9 +64,9 @@
   --glass-border:rgba(0,0,0,0.08);
 
   --map-base:    #f5e8e8;
-  --map-road:    #d8e4da;
-  --map-road-2:  #cddacf;
-  --map-block:   #dde8df;
+  --map-road:    #e4d8d8;
+  --map-road-2:  #d8c8c8;
+  --map-block:   #e8dddd;
   --map-overlay-from: #fff5f5;
 
   --field-bg:    rgba(0,0,0,0.04);

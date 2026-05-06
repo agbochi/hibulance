@@ -192,11 +192,11 @@ function HeroBgScene() {
     >
       <defs>
         <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#040e06" stopOpacity="1"/>
-          <stop offset="100%" stopColor="#0a1e0d" stopOpacity="1"/>
+          <stop offset="0%" stopColor="#080408" stopOpacity="1"/>
+          <stop offset="100%" stopColor="#0e0808" stopOpacity="1"/>
         </linearGradient>
         <radialGradient id="moonGlow" cx="75%" cy="18%" r="12%">
-          <stop offset="0%" stopColor="#66bb88" stopOpacity="0.5"/>
+          <stop offset="0%" stopColor="#bb4444" stopOpacity="0.5"/>
           <stop offset="100%" stopColor="#D41F26" stopOpacity="0"/>
         </radialGradient>
       </defs>
@@ -211,41 +211,41 @@ function HeroBgScene() {
         [980,50],[1080,85],[1180,60],[1300,75],[1380,45],[160,130],[420,120],
         [600,140],[800,110],[1000,130],[1200,100],[1400,115],
       ].map(([x, y], i) => (
-        <circle key={i} cx={x} cy={y} r="1.5" fill="#88ddaa" opacity={0.25 + (i % 3) * 0.1}/>
+        <circle key={i} cx={x} cy={y} r="1.5" fill="#ddaaaa" opacity={0.25 + (i % 3) * 0.1}/>
       ))}
 
       {/* Moon */}
-      <circle cx="1080" cy="130" r="45" fill="#061409" opacity="0.9"/>
+      <circle cx="1080" cy="130" r="45" fill="#090408" opacity="0.9"/>
       <circle cx="1080" cy="130" r="40" fill="#D41F26" opacity="0.12"/>
-      <circle cx="1096" cy="118" r="28" fill="#040e06" opacity="0.6"/>
+      <circle cx="1096" cy="118" r="28" fill="#080408" opacity="0.6"/>
 
       {/* ── Nigerian flag silhouette (subtle, far background) ── */}
       {/* Far buildings — green-tinged dark */}
-      <rect x="0"    y="480" width="60"  height="420" fill="#0a1e0c" opacity="0.55"/>
-      <rect x="55"   y="520" width="45"  height="380" fill="#091a0b" opacity="0.55"/>
-      <rect x="95"   y="460" width="70"  height="440" fill="#0a1e0c" opacity="0.55"/>
-      <rect x="160"  y="500" width="50"  height="400" fill="#081608" opacity="0.55"/>
-      <rect x="205"  y="440" width="80"  height="460" fill="#0d2410" opacity="0.55"/>
-      <rect x="280"  y="490" width="55"  height="410" fill="#0a1a0c" opacity="0.55"/>
-      <rect x="330"  y="455" width="65"  height="445" fill="#0a1e0c" opacity="0.55"/>
-      <rect x="390"  y="510" width="40"  height="390" fill="#081608" opacity="0.55"/>
-      <rect x="425"  y="430" width="90"  height="470" fill="#102814" opacity="0.55"/>
-      <rect x="510"  y="470" width="60"  height="430" fill="#0a1a0c" opacity="0.55"/>
-      <rect x="565"  y="490" width="55"  height="410" fill="#0a1e0c" opacity="0.55"/>
-      <rect x="615"  y="445" width="80"  height="455" fill="#0d2410" opacity="0.55"/>
-      <rect x="690"  y="475" width="50"  height="425" fill="#081608" opacity="0.55"/>
-      <rect x="735"  y="435" width="95"  height="465" fill="#112a15" opacity="0.55"/>
-      <rect x="825"  y="465" width="60"  height="435" fill="#0a1a0c" opacity="0.55"/>
-      <rect x="880"  y="485" width="50"  height="415" fill="#091a0b" opacity="0.55"/>
-      <rect x="925"  y="450" width="75"  height="450" fill="#0a1e0c" opacity="0.55"/>
-      <rect x="995"  y="480" width="55"  height="420" fill="#081608" opacity="0.55"/>
-      <rect x="1045" y="440" width="85"  height="460" fill="#102814" opacity="0.55"/>
-      <rect x="1125" y="470" width="60"  height="430" fill="#0a1a0c" opacity="0.55"/>
-      <rect x="1180" y="490" width="50"  height="410" fill="#0a1e0c" opacity="0.55"/>
-      <rect x="1225" y="455" width="70"  height="445" fill="#0d2410" opacity="0.55"/>
-      <rect x="1290" y="480" width="55"  height="420" fill="#081608" opacity="0.55"/>
-      <rect x="1340" y="445" width="80"  height="455" fill="#0a1e0c" opacity="0.55"/>
-      <rect x="1415" y="470" width="50"  height="430" fill="#0a1a0c" opacity="0.55"/>
+      <rect x="0"    y="480" width="60"  height="420" fill="#0e0808" opacity="0.55"/>
+      <rect x="55"   y="520" width="45"  height="380" fill="#0c0808" opacity="0.55"/>
+      <rect x="95"   y="460" width="70"  height="440" fill="#0e0808" opacity="0.55"/>
+      <rect x="160"  y="500" width="50"  height="400" fill="#0c0808" opacity="0.55"/>
+      <rect x="205"  y="440" width="80"  height="460" fill="#140808" opacity="0.55"/>
+      <rect x="280"  y="490" width="55"  height="410" fill="#0e0808" opacity="0.55"/>
+      <rect x="330"  y="455" width="65"  height="445" fill="#0e0808" opacity="0.55"/>
+      <rect x="390"  y="510" width="40"  height="390" fill="#0c0808" opacity="0.55"/>
+      <rect x="425"  y="430" width="90"  height="470" fill="#160808" opacity="0.55"/>
+      <rect x="510"  y="470" width="60"  height="430" fill="#0e0808" opacity="0.55"/>
+      <rect x="565"  y="490" width="55"  height="410" fill="#0e0808" opacity="0.55"/>
+      <rect x="615"  y="445" width="80"  height="455" fill="#140808" opacity="0.55"/>
+      <rect x="690"  y="475" width="50"  height="425" fill="#0c0808" opacity="0.55"/>
+      <rect x="735"  y="435" width="95"  height="465" fill="#180808" opacity="0.55"/>
+      <rect x="825"  y="465" width="60"  height="435" fill="#0e0808" opacity="0.55"/>
+      <rect x="880"  y="485" width="50"  height="415" fill="#0c0808" opacity="0.55"/>
+      <rect x="925"  y="450" width="75"  height="450" fill="#0e0808" opacity="0.55"/>
+      <rect x="995"  y="480" width="55"  height="420" fill="#0c0808" opacity="0.55"/>
+      <rect x="1045" y="440" width="85"  height="460" fill="#160808" opacity="0.55"/>
+      <rect x="1125" y="470" width="60"  height="430" fill="#0e0808" opacity="0.55"/>
+      <rect x="1180" y="490" width="50"  height="410" fill="#0e0808" opacity="0.55"/>
+      <rect x="1225" y="455" width="70"  height="445" fill="#140808" opacity="0.55"/>
+      <rect x="1290" y="480" width="55"  height="420" fill="#0c0808" opacity="0.55"/>
+      <rect x="1340" y="445" width="80"  height="455" fill="#0e0808" opacity="0.55"/>
+      <rect x="1415" y="470" width="50"  height="430" fill="#0e0808" opacity="0.55"/>
 
       {/* Building windows — Nigerian green tint */}
       {[
@@ -264,9 +264,9 @@ function HeroBgScene() {
       ))}
 
       {/* Road / ground */}
-      <rect x="0" y="740" width="1440" height="160" fill="#060e07" opacity="0.85"/>
-      <rect x="0" y="755" width="1440" height="3" fill="#0a1a0c" opacity="0.6"/>
-      <rect x="0" y="810" width="1440" height="3" fill="#0a1a0c" opacity="0.6"/>
+      <rect x="0" y="740" width="1440" height="160" fill="#0e0808" opacity="0.85"/>
+      <rect x="0" y="755" width="1440" height="3" fill="#0e0808" opacity="0.6"/>
+      <rect x="0" y="810" width="1440" height="3" fill="#0e0808" opacity="0.6"/>
       {/* Centre dashes — Nigerian green */}
       {Array.from({ length: 18 }).map((_, i) => (
         <rect key={i} x={i * 80 + 10} y="780" width="50" height="4" rx="2"
@@ -276,9 +276,9 @@ function HeroBgScene() {
       {/* ── Nigerian ambulance (white body, green cross/stripe) ── */}
       <g transform="translate(320, 700)">
         {/* Body — white/light */}
-        <rect x="0" y="0" width="160" height="80" rx="8" fill="#d8ede0" opacity="0.9"/>
+        <rect x="0" y="0" width="160" height="80" rx="8" fill="#edd8d8" opacity="0.9"/>
         {/* Cab */}
-        <rect x="100" y="-25" width="60" height="45" rx="6" fill="#d8ede0" opacity="0.9"/>
+        <rect x="100" y="-25" width="60" height="45" rx="6" fill="#edd8d8" opacity="0.9"/>
         {/* Nigerian green stripe */}
         <rect x="0" y="20" width="160" height="12" fill="#D41F26" opacity="0.7"/>
         {/* Green cross — Nigerian health symbol */}
@@ -287,12 +287,12 @@ function HeroBgScene() {
         {/* "AMBULANCE" text bar */}
         <rect x="0" y="55" width="95" height="12" fill="#a01219" opacity="0.4"/>
         {/* Windshield */}
-        <rect x="110" y="-20" width="44" height="30" rx="4" fill="#88ddaa" opacity="0.2"/>
+        <rect x="110" y="-20" width="44" height="30" rx="4" fill="#dd8888" opacity="0.2"/>
         {/* Wheels */}
-        <circle cx="30" cy="82" r="18" fill="#0a1a0c"/>
-        <circle cx="30" cy="82" r="10" fill="#122015"/>
-        <circle cx="130" cy="82" r="18" fill="#0a1a0c"/>
-        <circle cx="130" cy="82" r="10" fill="#122015"/>
+        <circle cx="30" cy="82" r="18" fill="#0a0808"/>
+        <circle cx="30" cy="82" r="10" fill="#120808"/>
+        <circle cx="130" cy="82" r="18" fill="#0a0808"/>
+        <circle cx="130" cy="82" r="10" fill="#120808"/>
         {/* Siren lights — green + blue (Nigerian) */}
         <rect x="40" y="-6" width="16" height="8" rx="3" fill="#D41F26" opacity="0.95"/>
         <rect x="60" y="-6" width="16" height="8" rx="3" fill="#3b82f6" opacity="0.75"/>
@@ -306,17 +306,17 @@ function HeroBgScene() {
 
       {/* ── Second distant ambulance ── */}
       <g transform="translate(980, 715)" opacity="0.6">
-        <rect x="0" y="0" width="110" height="55" rx="6" fill="#c8e8d5"/>
-        <rect x="70" y="-18" width="42" height="32" rx="4" fill="#c8e8d5"/>
+        <rect x="0" y="0" width="110" height="55" rx="6" fill="#e8c8c8"/>
+        <rect x="70" y="-18" width="42" height="32" rx="4" fill="#e8c8c8"/>
         <rect x="0" y="14" width="110" height="8" fill="#D41F26" opacity="0.6"/>
-        <circle cx="20" cy="57" r="13" fill="#0a1a0c"/>
-        <circle cx="90" cy="57" r="13" fill="#0a1a0c"/>
+        <circle cx="20" cy="57" r="13" fill="#0a0808"/>
+        <circle cx="90" cy="57" r="13" fill="#0a0808"/>
         <rect x="28" y="-4" width="11" height="6" rx="2" fill="#D41F26" opacity="0.9"/>
         <rect x="42" y="-4" width="11" height="6" rx="2" fill="#3b82f6" opacity="0.6"/>
       </g>
 
       {/* ── Nigerian hospital building (green cross) ── */}
-      <rect x="1050" y="320" width="280" height="580" fill="#0d2410" opacity="0.75"/>
+      <rect x="1050" y="320" width="280" height="580" fill="#140808" opacity="0.75"/>
       {/* Hospital green cross sign */}
       <rect x="1155" y="350" width="70" height="24" rx="4" fill="#D41F26" opacity="0.6"/>
       <rect x="1177" y="332" width="26" height="60" rx="4" fill="#D41F26" opacity="0.6"/>
@@ -332,7 +332,7 @@ function HeroBgScene() {
         ))
       )}
       {/* Entrance */}
-      <rect x="1148" y="780" width="84" height="120" rx="4" fill="#061409" opacity="0.9"/>
+      <rect x="1148" y="780" width="84" height="120" rx="4" fill="#090408" opacity="0.9"/>
       <rect x="1148" y="780" width="84" height="8" fill="#D41F26" opacity="0.4"/>
 
       {/* Ground glow from ambulance lights */}
