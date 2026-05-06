@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ CSS variables Ã¢â‚¬â€ Dark mode (default) Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* ── CSS variables — Dark mode (default) ── */
 :root,
 [data-theme="dark"] {
   --brand:        #D41F26;
@@ -46,7 +46,7 @@
   );
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Light mode Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* ── Light mode ── */
 [data-theme="light"] {
   --bg:           #fff5f5;
   --bg-2:         #fceaea;
@@ -64,9 +64,9 @@
   --glass-border:rgba(0,0,0,0.08);
 
   --map-base:    #f5e8e8;
-  --map-road:    #f2d0d0;
-  --map-road-2:  #edc8c8;
-  --map-block:   #f5d9d9;
+  --map-road:    #d8e4da;
+  --map-road-2:  #cddacf;
+  --map-block:   #dde8df;
   --map-overlay-from: #fff5f5;
 
   --field-bg:    rgba(0,0,0,0.04);
@@ -84,7 +84,7 @@
   );
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Base Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* ── Base ── */
 @layer base {
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; font-size: 13px; }
@@ -102,7 +102,7 @@
   ::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 3px; }
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Custom component classes Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* ── Custom component classes ── */
 @layer components {
 
   .live-dot {
@@ -173,7 +173,7 @@
   .t-surface-2 { background: var(--surface-2); }
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Keyframes not in tailwind config Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* ── Keyframes not in tailwind config ── */
 @keyframes hero-crossfade {
   0%, 38%  { opacity: 1; }
   48%, 93% { opacity: 0; }
@@ -261,7 +261,7 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Light-mode overrides for hardcoded Tailwind white/* classes Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* ── Light-mode overrides for hardcoded Tailwind white/* classes ── */
 /* Text color overrides */
 [data-theme="light"] .text-white        { color: var(--text) !important; }
 [data-theme="light"] .text-white\/80    { color: var(--text-muted) !important; }

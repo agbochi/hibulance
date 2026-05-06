@@ -6,13 +6,13 @@ const DEMO = {
   status: 'En Route',
   unit: 'AMB-07',
   paramedic: 'Dr. Emeka Okafor',
-  role: 'Lead Paramedic Ã‚Â· Lagos',
+  role: 'Lead Paramedic · Lagos',
   eta: '3 min',
   steps: [
     { label: 'Request Received',     time: '10:32 AM', done: true,    active: false },
     { label: 'Ambulance Dispatched', time: '10:34 AM', done: true,    active: false },
     { label: 'En Route to You',      time: 'ETA 3 min',done: false,   active: true  },
-    { label: 'Arrived',              time: 'Ã¢â‚¬â€',         done: false,  active: false },
+    { label: 'Arrived',              time: '—',         done: false,  active: false },
   ],
 }
 
@@ -145,7 +145,7 @@ export default function TrackSection() {
               </div>
               <div className="flex-1">
                 <div className="font-semibold text-white">{DEMO.paramedic}</div>
-                <div className="text-xs text-white/50">{DEMO.role} Ã‚Â· {DEMO.unit}</div>
+                <div className="text-xs text-white/50">{DEMO.role} · {DEMO.unit}</div>
               </div>
               <a
                 href="tel:+233000000000"

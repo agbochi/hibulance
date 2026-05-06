@@ -30,13 +30,13 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
   return (
     <section className="section-page relative pt-16 flex flex-col justify-center overflow-hidden min-h-screen">
 
-      {/* Ã¢â€â‚¬Ã¢â€â‚¬ Crossfading photo background Ã¢â€â‚¬Ã¢â€â‚¬ */}
+      {/* ── Crossfading photo background ── */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        {/* Photo 1 Ã¢â‚¬â€ Nigerian paramedics */}
+        {/* Photo 1 — Nigerian paramedics */}
         <div className="absolute inset-0" style={{ animation: 'hero-crossfade 14s ease-in-out infinite' }}>
           <Image src="/med1.jpg" alt="" fill className="object-cover object-center" priority />
         </div>
-        {/* Photo 2 Ã¢â‚¬â€ Medical instruments */}
+        {/* Photo 2 — Medical instruments */}
         <div className="absolute inset-0" style={{ opacity: 0, animation: 'hero-crossfade 14s ease-in-out infinite 7s' }}>
           <Image src="/med2.jpg" alt="" fill className="object-cover object-center" />
         </div>
@@ -75,7 +75,7 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
 
           <p className="text-lg leading-relaxed max-w-md" style={{ color: 'var(--text-muted)' }}>
             Request a certified ambulance in seconds. Our fleet of paramedics is on
-            standby Ã¢â‚¬â€ reaching you anywhere in the city within minutes.
+            standby — reaching you anywhere in the city within minutes.
           </p>
 
           {/* CTA buttons */}
@@ -111,7 +111,7 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
           </div>
         </div>
 
-        {/* RIGHT Ã¢â‚¬â€ Floating ambulance card */}
+        {/* RIGHT — Floating ambulance card */}
         <div className="flex justify-center items-center relative">
           {/* Pulse rings */}
           <div className="absolute rounded-full bg-brand/20 w-72 h-72 animate-pulse-ring" />
@@ -152,9 +152,9 @@ export default function HeroSection({ navigate }: { navigate: (s: ActiveSection)
               </div>
               <div className="flex-1">
               <div className="text-sm font-semibold" style={{ color: 'var(--text)' }}>Dr. Emeka Okafor</div>
-              <div className="text-xs" style={{ color: 'var(--text-muted)' }}>Lead Paramedic Ã‚Â· Lagos</div>
+              <div className="text-xs" style={{ color: 'var(--text-muted)' }}>Lead Paramedic · Lagos</div>
               </div>
-              <div className="text-yellow-400 text-xs font-semibold">Ã¢Ëœâ€¦ 4.9</div>
+              <div className="text-yellow-400 text-xs font-semibold">★ 4.9</div>
             </div>
           </div>
         </div>
@@ -219,8 +219,8 @@ function HeroBgScene() {
       <circle cx="1080" cy="130" r="40" fill="#D41F26" opacity="0.12"/>
       <circle cx="1096" cy="118" r="28" fill="#040e06" opacity="0.6"/>
 
-      {/* Ã¢â€â‚¬Ã¢â€â‚¬ Nigerian flag silhouette (subtle, far background) Ã¢â€â‚¬Ã¢â€â‚¬ */}
-      {/* Far buildings Ã¢â‚¬â€ green-tinged dark */}
+      {/* ── Nigerian flag silhouette (subtle, far background) ── */}
+      {/* Far buildings — green-tinged dark */}
       <rect x="0"    y="480" width="60"  height="420" fill="#0a1e0c" opacity="0.55"/>
       <rect x="55"   y="520" width="45"  height="380" fill="#091a0b" opacity="0.55"/>
       <rect x="95"   y="460" width="70"  height="440" fill="#0a1e0c" opacity="0.55"/>
@@ -247,7 +247,7 @@ function HeroBgScene() {
       <rect x="1340" y="445" width="80"  height="455" fill="#0a1e0c" opacity="0.55"/>
       <rect x="1415" y="470" width="50"  height="430" fill="#0a1a0c" opacity="0.55"/>
 
-      {/* Building windows Ã¢â‚¬â€ Nigerian green tint */}
+      {/* Building windows — Nigerian green tint */}
       {[
         [15,510],[30,510],[15,535],[30,535],[15,560],[30,560],
         [100,480],[115,480],[100,505],[115,505],[100,530],
@@ -267,21 +267,21 @@ function HeroBgScene() {
       <rect x="0" y="740" width="1440" height="160" fill="#060e07" opacity="0.85"/>
       <rect x="0" y="755" width="1440" height="3" fill="#0a1a0c" opacity="0.6"/>
       <rect x="0" y="810" width="1440" height="3" fill="#0a1a0c" opacity="0.6"/>
-      {/* Centre dashes Ã¢â‚¬â€ Nigerian green */}
+      {/* Centre dashes — Nigerian green */}
       {Array.from({ length: 18 }).map((_, i) => (
         <rect key={i} x={i * 80 + 10} y="780" width="50" height="4" rx="2"
           fill="#D41F26" opacity="0.3"/>
       ))}
 
-      {/* Ã¢â€â‚¬Ã¢â€â‚¬ Nigerian ambulance (white body, green cross/stripe) Ã¢â€â‚¬Ã¢â€â‚¬ */}
+      {/* ── Nigerian ambulance (white body, green cross/stripe) ── */}
       <g transform="translate(320, 700)">
-        {/* Body Ã¢â‚¬â€ white/light */}
+        {/* Body — white/light */}
         <rect x="0" y="0" width="160" height="80" rx="8" fill="#d8ede0" opacity="0.9"/>
         {/* Cab */}
         <rect x="100" y="-25" width="60" height="45" rx="6" fill="#d8ede0" opacity="0.9"/>
         {/* Nigerian green stripe */}
         <rect x="0" y="20" width="160" height="12" fill="#D41F26" opacity="0.7"/>
-        {/* Green cross Ã¢â‚¬â€ Nigerian health symbol */}
+        {/* Green cross — Nigerian health symbol */}
         <rect x="35" y="10" width="30" height="10" rx="2" fill="#D41F26" opacity="0.8"/>
         <rect x="45" y="4" width="10" height="22" rx="2" fill="#D41F26" opacity="0.8"/>
         {/* "AMBULANCE" text bar */}
@@ -293,7 +293,7 @@ function HeroBgScene() {
         <circle cx="30" cy="82" r="10" fill="#122015"/>
         <circle cx="130" cy="82" r="18" fill="#0a1a0c"/>
         <circle cx="130" cy="82" r="10" fill="#122015"/>
-        {/* Siren lights Ã¢â‚¬â€ green + blue (Nigerian) */}
+        {/* Siren lights — green + blue (Nigerian) */}
         <rect x="40" y="-6" width="16" height="8" rx="3" fill="#D41F26" opacity="0.95"/>
         <rect x="60" y="-6" width="16" height="8" rx="3" fill="#3b82f6" opacity="0.75"/>
         {/* Siren glow */}
@@ -304,7 +304,7 @@ function HeroBgScene() {
         <rect x="-45" y="50" width="40" height="2" rx="1" fill="#D41F26" opacity="0.08"/>
       </g>
 
-      {/* Ã¢â€â‚¬Ã¢â€â‚¬ Second distant ambulance Ã¢â€â‚¬Ã¢â€â‚¬ */}
+      {/* ── Second distant ambulance ── */}
       <g transform="translate(980, 715)" opacity="0.6">
         <rect x="0" y="0" width="110" height="55" rx="6" fill="#c8e8d5"/>
         <rect x="70" y="-18" width="42" height="32" rx="4" fill="#c8e8d5"/>
@@ -315,7 +315,7 @@ function HeroBgScene() {
         <rect x="42" y="-4" width="11" height="6" rx="2" fill="#3b82f6" opacity="0.6"/>
       </g>
 
-      {/* Ã¢â€â‚¬Ã¢â€â‚¬ Nigerian hospital building (green cross) Ã¢â€â‚¬Ã¢â€â‚¬ */}
+      {/* ── Nigerian hospital building (green cross) ── */}
       <rect x="1050" y="320" width="280" height="580" fill="#0d2410" opacity="0.75"/>
       {/* Hospital green cross sign */}
       <rect x="1155" y="350" width="70" height="24" rx="4" fill="#D41F26" opacity="0.6"/>
