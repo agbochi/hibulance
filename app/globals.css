@@ -121,13 +121,13 @@
 
   .btn-brand {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200;
-    background: var(--brand);
+    background: #008751;
     color: #ffffff;
   }
   .btn-brand:hover {
-    background: var(--brand-dark);
+    background: #006B3C;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px var(--brand-glow);
+    box-shadow: 0 8px 24px rgba(0,135,81,0.35);
   }
   .btn-brand:active { transform: translateY(0); }
 
